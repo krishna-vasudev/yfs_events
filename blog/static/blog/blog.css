@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,400&display=swap");
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.header {
+  width: 100%;
+  padding: 5px;
+  font-size: 2rem;
+  text-align: center;
+  background: rgb(151, 172, 151);
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.fakeimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /* background-image: url("https://images.unsplash.com/photo-1535242208474-9a2793260ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW5lcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"); */
+}
+
+.hell {
+  text-align: center;
+}
+.card p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 63em;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  text-indent: 5px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+}
+i {
+  margin-left: 40px;
+}
+.icon {
+  text-decoration: none;
+  margin-left: 950px;
+  margin-bottom: 10px;
+}
+.aa {
+  margin-left: 3px;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.box-1 {
+  height: 200px;
+  width: 600px;
+  background-color: rgb(175, 170, 170);
+}
+
+.fa-heart-o {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+}
+.box-header img {
+  width: 3vw;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.profile-name h3 {
+  font-size: 1rem;
+}
+
+.box {
+  margin-top: 20px;
+  margin-left: 290px;
+  margin-right: 300px;
+  margin-bottom: 20px;
+  border: rgb(168, 168, 167) solid 1px;
+}
+#inner {
+  text-align: center;
+  margin-left: -115px;
+  margin-top: -2rem;
+}
+
+textarea {
+  width: 42vw;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.button {
+  margin-top: -80px;
+  background-color: rgb(74, 180, 95);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 749px) {
+  body {
+    width: 359%;
+  }
+
+  .header {
+    font-size: 4rem;
+  }
+
+  .card .hell {
+    font-size: 2.5rem;
+  }
+
+  .card .fakeimg {
+    height: 89vh !important;
+  }
+
+  .card p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60rem;
+    font-size: 2.5rem;
+  }
+
+  .icon {
+    margin-left: 33rem;
+  }
+
+  .icon i {
+    font-size: 2.5rem !important;
+  }
+
+  textarea {
+    width: 216vw;
+    height: 19vh;
+    font-size: 2.5rem;
+    border-radius: 7px;
+    padding: 10px;
+  }
+
+  .button {
+    font-size: 2.5rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    margin: 2rem 1rem;
+    padding: 0 60px;
+  }
+
+  .box-header img {
+    width: 27vw;
+  }
+
+  .profile-name h3 {
+    font-size: 2rem;
+  }
+
+  #inner {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  #inner p {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+  body {
+    width: 222%;
+  }
+
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .hell {
+    font-size: 2rem;
+  }
+  .fakeimg {
+    width: 80% !important;
+    height: 117vh !important;
+  }
+
+  .card p {
+    width: 60em;
+    font-size: 1.34rem;
+    letter-spacing: 1.1px;
+  }
+
+  hr {
+    width: 80rem !important;
+  }
+
+  .icon {
+    margin-left: 72rem;
+  }
+
+  .fa {
+    font-size: 2rem !important;
+  }
+
+  textarea {
+    width: 55rem;
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 1000px;
+    margin: 1rem !important;
+  }
+  .box-header img {
+    width: 13vw;
+  }
+
+  .profile-name h3 {
+    font-size: 1.7rem;
+  }
+
+  #inner p {
+    font-size: 1.5rem;
+  }
+
+  #inner {
+    text-align: center;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+}

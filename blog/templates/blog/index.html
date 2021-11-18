@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,400&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(198,206,201,0.5);
+  font-size: 16px;
+}
+
+.blog-card {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2),
+              -1px -1px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 2vh;
+}
+
+.header {
+  background-color: rgb(151, 172, 151);;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.category {
+  margin: 0;
+  padding: 1vw;
+  color: #fff;
+  font-size: 1em;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-transform: uppercase;
+}
+
+.picture-wrapper {
+  height: 30vh;
+  width: 100%;
+  /* background-image: url("https://images.unsplash.com/photo-1535242208474-9a2793260ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW5lcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"); */
+  background-size: cover;
+}
+
+.text-wrapper {
+  font-family: "Open Sans", sans-serif;
+}
+
+.title {
+  font-size: 1em;
+
+  padding: 1vh 4vh 1vh 2vh;
+}
+
+.author {
+  font-size: 0.75em;
+  padding-left: 4vh;
+  font-style: italic;
+}
+
+.text {
+  font-size: 1em;
+  padding: 1vh 2vh;
+}
+
+.hover {
+  font-size: 1.5625em;
+}
+.hi{
+  flex-direction: column;
+}
+.aa{
+text-decoration: none;
+
+}
+@media screen and (min-width: 700px) {
+  .blog-card {
+    width: 600px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+    
+  .picture-wrapper {
+    height: auto;
+    width: 60%;
+    border-bottom-left-radius: 10px;
+  }
+
+  .title {
+    padding-right: 10vh;
+  }
+  i{
+    flex-direction: column;
+  font-size: 10px;
+}
+}
+i{
+  text-decoration: none;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.aa{
+  margin-left: 3px;
+  font-family: "Open Sans", sans-serif;
+}
+</style>
+<body>
+<div class="hi">
+  {% for blog in blogs reversed %}
+  <div class="blog-card">
+    <div class="header">
+      <h2 class="category">{{blog.title}}</h2>
+    </div>
+  
+    <div class="content">
+      <div class="picture-wrapper" style="background-image: url({{blog.blog_image.url}});"></div>
+  
+      <div class="text-wrapper">
+        <p class="title">by {{blog.author}}, {{blog.uploaded_at}}</p>
+        <p class="text">
+          {{blog.body|safe|truncatewords:20}} <a href="/blogs/detailedblog/{{blog.id}}">readmore</a>
+        </p>
+        <div class="icon">
+          <i style="font-size:15px; color:rgb(150, 10, 10);" class="fa fa-heart"><a class="aa" href="">{{blog.no_of_likes}} likes</a></i>
+          <i style="font-size:15px" class="fa fa-heart"><a class="aa" href="">{{blog.no_of_comments}} Comments</a></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+</div>
+
+</body>
+</html>
